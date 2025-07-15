@@ -1,1 +1,31 @@
-<app-hello></app-hello>
+<!-- two way binding -->
+<!-- <section>
+  <input type="text" placeholder="Enter name" [(ngModel)]="name" />
+  My name is: {{ name }}
+</section> -->
+
+<!-- [ngModel] + (ngModelChange) => [(ngModel)]
+
+<input
+  type="text"
+  placeholder="Enter name"
+  [ngModel]="name"
+  (ngModelChange)="name = $event"
+/> -->
+<!-- end two way binding -->
+
+<!-- <ul>
+  <li *ngFor="let i of fruits">{{ i }}</li>
+</ul> -->
+<!-- 
+<ul>
+  @for (item of fruits; track $index) {
+  <li>{{ item }}</li>
+  }
+</ul> -->
+
+@if(isLoggedId){
+<p>Welcome Gopi</p>
+} @else {
+<p>Login to the app</p>
+}
