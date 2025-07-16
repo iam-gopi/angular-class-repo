@@ -24,8 +24,18 @@
   }
 </ul> -->
 
-@if(isLoggedId){
+<!-- @if(isLoggedId){
 <p>Welcome Gopi</p>
 } @else {
 <p>Login to the app</p>
-}
+} -->
+
+<!-- @switch(value){ @case ("10"){
+<p>the value is 10</p>
+} @case ("20"){
+<p>the value is 20</p>
+} @default {
+<p>Not any expected data</p>
+} } -->
+
+<app-hello (emiter)="handleReceivedData($event)" [fromparent]="parentmessage" />
