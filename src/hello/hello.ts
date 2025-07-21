@@ -19,12 +19,12 @@ export class Hello {
   // fromparent = input<string>();
 
   // older method
-  @Output()
-  emiter: EventEmitter<string> = new EventEmitter();
+  // @Output()
+  // emiter: EventEmitter<string> = new EventEmitter();
 
-  @Input() fromparent: string = '';
+  // @Input() fromparent: string = '';
 
-  emitData() {
-    this.emiter.emit('from child');
-  }
+  // emitData() {
+  //   this.emiter.emit('from child');
+  // }
 }

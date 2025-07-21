@@ -1,8 +1,22 @@
 <p>second-component works!</p>
 <!-- string interpolation data binding -->
-{{ name }}
+<!-- {{ name }} -->
 
-<!-- property binding -->
+<!-- property binding
 <input type="text" [value]="val" />
 
-<button (click)="btnClickHandler()">click me</button>
+<button (click)="btnClickHandler()">click me</button> -->
+
+<form [formGroup]="loginForm" (submit)="submitHandler()">
+  <label>Enter Username</label>
+  <input type="text" id="username" formControlName="username" />
+  @if(loginForm.get('username')?.invalid && loginForm.get('username')?.touched)
+  {
+  <p>Email is not valid</p>
+  }
+  <br />
+  <label>Enter Password</label>
+  <input type="password" id="password" formControlName="password" />
+  <br />
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
