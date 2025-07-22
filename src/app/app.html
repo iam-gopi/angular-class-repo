@@ -42,8 +42,32 @@
 
 <!-- <app-second-component /> -->
 
-<p>
-  <!-- {{ "this is test" | titlecase }} -->
-  <!-- {{ "this is test" | lowercase }} -->
-  {{ 0.12 | percent }}
-</p>
+<!-- <p> -->
+<!-- {{ "this is test" | titlecase }} -->
+<!-- {{ "this is test" | lowercase }} -->
+<!-- {{ 0.12 | percent }} -->
+<!-- </p> -->
+
+<form (submit)="formSubmitHandler()" [formGroup]="myform">
+  <div>
+    <label for="">Name</label>
+    <input
+      type="text"
+      id="name"
+      placeholder="enter name"
+      formControlName="name"
+    />
+  </div>
+  <div>
+    <label for="">Email</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="enter email"
+      formControlName="email"
+    />
+  </div>
+  <div>
+    <button type="submit" id="btnSubmit">Register</button>
+  </div>
+</form>
