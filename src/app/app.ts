@@ -17,13 +17,19 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, CommonModule, ReactiveFormsModule, NgOptimizedImage],
+  imports: [
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
+    NgOptimizedImage,
+    RouterOutlet,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
   standalone: true,
 })
 export class App {
-  a = 'favicon.ico';
+  // a = 'favicon.ico';
   // protected title = 'first';
   // parentmessage: string = 'This is from parent';
   // a: any;
